@@ -1,13 +1,5 @@
-![](https://github.com/CTFd/CTFd/blob/master/CTFd/themes/core/static/img/logo.png?raw=true)
-====
-
-[![Build Status](https://travis-ci.org/CTFd/CTFd.svg?branch=master)](https://travis-ci.org/CTFd/CTFd)
-[![CTFd Slack](https://slack.ctfd.io/badge.svg)](https://slack.ctfd.io/)
-
-## What is CTFd?
-CTFd is a Capture The Flag framework focusing on ease of use and customizability. It comes with everything you need to run a CTF and it's easy to customize with plugins and themes.
-
-![CTFd is a CTF in a can.](https://github.com/CTFd/CTFd/blob/master/CTFd/themes/core/static/img/scoreboard.png?raw=true)
+# Welcome to g2uc_CTFd
+The g2uc_CTFd platform inherited from [CTFd](https://github.com/CTFd/CTFd).
 
 ## Features
  * Create your own challenges, categories, hints, and flags from the Admin Interface
@@ -37,21 +29,3 @@ CTFd is a Capture The Flag framework focusing on ease of use and customizability
  3. Use `python serve.py` in a terminal to drop into debug mode.
  4. [Here](https://github.com/CTFd/CTFd/wiki/Deployment) are some deployment options
  5. You can check out the [Getting Started](https://github.com/CTFd/CTFd/wiki/Getting-Started) guide for a breakdown of some of the features you need to get started.
-
-## Live Demo
-https://demo.ctfd.io/
-
-## Support
-To get basic support, you can join the [CTFd Slack Community](https://slack.ctfd.io/): [![CTFd Slack](https://slack.ctfd.io/badge.svg)](https://slack.ctfd.io/)
-
-If you prefer commercial support or have a special project, send us an email: [support@ctfd.io](mailto:support@ctfd.io).
-
-## Managed Hosting
-Looking to use CTFd but don't want to deal with managing infrastructure? Check out [the CTFd website](https://ctfd.io/) for managed CTFd deployments. 
-
-## HackerFire
-Looking for CTF challenges to work on? [HackerFire](https://hackerfire.com/) is a learning focused CTF built using CTFd. It features a wide variety of challenges and is updated with new content frequently. It also contains custom knowledge resources to teach newcomers about the techniques used to solve a challenge. 
-
-## Credits
- * Logo by [Laura Barbera](http://www.laurabb.com/)
- * Theme by [Christopher Thompson](https://github.com/breadchris)
