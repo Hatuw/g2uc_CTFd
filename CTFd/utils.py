@@ -684,6 +684,10 @@ def validate_url(url):
     return urlparse(url).scheme.startswith('http')
 
 
+def check_sno_format(sno):
+    return bool(re.match(r"1[4-7][0-9]{8}$", sno))
+
+
 def check_email_format(email):
     return bool(re.match(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", email))
 

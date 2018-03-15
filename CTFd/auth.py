@@ -142,21 +142,26 @@ def register():
     if request.method == 'POST':
         errors = []
         name = request.form['name']
+        sno = request.form['sno']
         email = request.form['email']
         password = request.form['password']
 
         name_len = len(name) == 0
         names = Teams.query.add_columns('name', 'id').filter_by(name=name).first()
+        valid_sno = utils.check_sno_format(request.form['sno'])
+        snos = Teams.query.add_columns('sno', 'id').filter_by(sno=sno).first()
         emails = Teams.query.add_columns('email', 'id').filter_by(email=email).first()
         pass_short = len(password) == 0
         pass_long = len(password) > 128
         valid_email = utils.check_email_format(request.form['email'])
         team_name_email_check = utils.check_email_format(name)
-
+        
+        if not valid_sno:
+            errors.append("Please enter a valid student ID")
         if not valid_email:
             errors.append("Please enter a valid email address")
-        if names:
-            errors.append('That team name is already taken')
+        if names or snos:
+            errors.append('That nick/user is already taken')
         if team_name_email_check is True:
             errors.append('Your team name cannot be an email address')
         if emails:
@@ -172,22 +177,24 @@ def register():
             return render_template('register.html', errors=errors, name=request.form['name'], email=request.form['email'], password=request.form['password'])
         else:
             with app.app_context():
-                team = Teams(name, email.lower(), password)
+                team = Teams(name, sno, email.lower(), password)
                 db.session.add(team)
                 db.session.commit()
                 db.session.flush()
 
                 session['username'] = team.name
+                session['sno'] = team.sno
                 session['id'] = team.id
                 session['admin'] = team.admin
                 session['nonce'] = utils.sha512(os.urandom(10))
 
                 if utils.can_send_mail() and utils.get_config('verify_emails'):  # Confirming users is enabled and we can send email.
                     logger = logging.getLogger('regs')
-                    logger.warn("[{date}] {ip} - {username} registered (UNCONFIRMED) with {email}".format(
+                    logger.warn("[{date}] {ip} - {username}/{sno} registered (UNCONFIRMED) with {email}".format(
                         date=time.strftime("%m/%d/%Y %X"),
                         ip=utils.get_ip(),
                         username=request.form['name'].encode('utf-8'),
+                        sno=request.form['sno'].encode('utf-8'),
                         email=request.form['email'].encode('utf-8')
                     ))
                     utils.verify_email(team.email)
@@ -197,10 +204,11 @@ def register():
                     if utils.can_send_mail():  # We want to notify the user that they have registered.
                         utils.sendmail(request.form['email'], "You've successfully registered for {}".format(utils.get_config('ctf_name')))
 
-        logger.warn("[{date}] {ip} - {username} registered with {email}".format(
+        logger.warn("[{date}] {ip} - {username}/{sno} registered with {email}".format(
             date=time.strftime("%m/%d/%Y %X"),
             ip=utils.get_ip(),
             username=request.form['name'].encode('utf-8'),
+            sno=request.form['sno'].encode('utf-8'),
             email=request.form['email'].encode('utf-8')
         ))
         db.session.close()

@@ -153,6 +153,7 @@ class Keys(db.Model):
 class Teams(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(128), unique=True)
+    sno = db.Column(db.String(10), unique=True)
     email = db.Column(db.String(128), unique=True)
     password = db.Column(db.String(128))
     website = db.Column(db.String(128))
@@ -164,8 +165,9 @@ class Teams(db.Model):
     admin = db.Column(db.Boolean, default=False)
     joined = db.Column(db.DateTime, default=datetime.datetime.utcnow)
 
-    def __init__(self, name, email, password):
+    def __init__(self, name, sno, email, password):
         self.name = name
+        self.sno = sno
         self.email = email
         self.password = bcrypt_sha256.encrypt(str(password))
 
