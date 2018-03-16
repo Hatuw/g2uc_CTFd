@@ -1,6 +1,15 @@
 # Welcome to g2uc_CTFd
 The g2uc_CTFd platform inherited from [CTFd](https://github.com/CTFd/CTFd).
 
+## TODO
+
+- [x] 添加 \`学号\` 字段
+- [x] 学号校验
+- [ ] 中文翻译
+- [ ] 样式修改
+- [ ] 动态flag
+- [ ] 提交限制(得分随提交的人减少)
+
 ## Features
  * Create your own challenges, categories, hints, and flags from the Admin Interface
     * Static & Regex based flags
