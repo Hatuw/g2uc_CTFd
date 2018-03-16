@@ -26,7 +26,7 @@
 <body>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
 	<div class="container">
-		<a href="{{ request.script_root }}/" class="navbar-brand">CTFd</a>
+		<a href="{{ request.script_root }}/" class="navbar-brand">g2uc_CTFd</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#base-navbars"
 				aria-controls="base-navbars" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -34,32 +34,29 @@
 		<div class="collapse navbar-collapse" id="base-navbars">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item"><a class="nav-link"
-										href="{{ request.script_root }}/admin/statistics">Statistics</a></li>
+										href="{{ request.script_root }}/admin/statistics">统计</a></li>
 				<li class="nav-item dropdown">
 					<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
-					   aria-haspopup="true" aria-expanded="true">Pages</a>
+					   aria-haspopup="true" aria-expanded="true">页面</a>
 					<div class="dropdown-menu">
-						<a class="dropdown-item" href="{{ request.script_root }}/admin/pages">All Pages</a>
-						<a class="dropdown-item" href="{{ request.script_root }}/admin/pages?operation=create">New
-							Page</a>
+						<a class="dropdown-item" href="{{ request.script_root }}/admin/pages">所有页面</a>
+						<a class="dropdown-item" href="{{ request.script_root }}/admin/pages?operation=create">新建页面</a>
 					</div>
 				</li>
-				<li class="nav-item"><a class="nav-link" href="{{ request.script_root }}/admin/teams">Teams</a></li>
+				<li class="nav-item"><a class="nav-link" href="{{ request.script_root }}/admin/teams">队伍</a></li>
 				<li class="nav-item"><a class="nav-link"
-										href="{{ request.script_root }}/admin/scoreboard">Scoreboard</a></li>
-				<li class="nav-item"><a class="nav-link" href="{{ request.script_root }}/admin/chals">Challenges</a>
+										href="{{ request.script_root }}/admin/scoreboard">排行榜</a></li>
+				<li class="nav-item"><a class="nav-link" href="{{ request.script_root }}/admin/chals">挑战</a>
 				</li>
 				<li class="nav-item dropdown">
 					<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
-					   aria-haspopup="true" aria-expanded="true">Submissions</a>
+					   aria-haspopup="true" aria-expanded="true">提交情况</a>
 					<div class="dropdown-menu">
-						<a class="dropdown-item" href="{{ request.script_root }}/admin/correct_keys/1">Correct
-							Submissions</a>
-						<a class="dropdown-item" href="{{ request.script_root }}/admin/wrong_keys/1">Wrong
-							Submissions</a>
+						<a class="dropdown-item" href="{{ request.script_root }}/admin/correct_keys/1">正确提交</a>
+						<a class="dropdown-item" href="{{ request.script_root }}/admin/wrong_keys/1">错误提交</a>
 					</div>
 				</li>
-				<li class="nav-item"><a class="nav-link" href="{{ request.script_root }}/admin/config">Config</a></li>
+				<li class="nav-item"><a class="nav-link" href="{{ request.script_root }}/admin/config">配置</a></li>
 
 				{% set plugin_menu = get_admin_plugin_menu_bar() %}
 				{% set plugins = get_configurable_plugins() %}
@@ -113,6 +110,8 @@
 	{% endblock %}
 </main>
 
+
+<!--
 <footer class="footer">
 	<div class="container text-center">
 		<a href="https://ctfd.io">
@@ -120,6 +119,7 @@
 		</a>
 	</div>
 </footer>
+-->
 
 <script src="{{ request.script_root }}/themes/admin/static/js/vendor/jquery.min.js"></script>
 <script src="{{ request.script_root }}/themes/admin/static/js/vendor/marked.min.js"></script>

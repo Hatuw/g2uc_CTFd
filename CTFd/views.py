@@ -30,9 +30,10 @@ def setup():
 
             # Admin user
             name = request.form['name']
+            sno = request.form['sno']
             email = request.form['email']
             password = request.form['password']
-            admin = Teams(name, email, password)
+            admin = Teams(name, sno, email, password)
             admin.admin = True
             admin.banned = True
 
@@ -50,10 +51,13 @@ def setup():
         </h3>
         <br>
         <h4 class="text-center">
+        111111111111111111111
             <a href="admin">Click here</a> to login and setup your CTF
         </h4>
     </div>
 </div>""".format(request.script_root)
+
+            index = ''.format(request.script_root)
 
             page = Pages(title=None, route='index', html=index, draft=False)
 

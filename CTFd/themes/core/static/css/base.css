@@ -38,7 +38,8 @@ table > thead > tr > td {
 }
 
 .jumbotron {
-    background-color: #343a40;
+    /*background-color: #343a40;*/
+    background-color: #21a519;
     color: #FFF;
     border-radius: 0;
     text-align: center;

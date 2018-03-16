@@ -228,6 +228,8 @@ def login():
         # Check if the user submitted an email address or a team name
         if utils.check_email_format(name) is True:
             team = Teams.query.filter_by(email=name).first()
+        elif utils.check_sno_format(name) is True:
+            team = Teams.query.filter_by(sno=name).first()
         else:
             team = Teams.query.filter_by(name=name).first()
 
