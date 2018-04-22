@@ -44,11 +44,15 @@
 					</label>
 					<input class="form-control" type="password" name="password" id="password-input" {% if password %}value="{{ password }}"{% endif %}/>
 				</div>
+				<label for="notice" style="color:#dc3545;">
+						<b>* 个人信息请务必属实 ( 发奖品要用啊...</b>
+				</label>
 				<div class="row pt-3">
 					<div class="col-md-12">
 						<button type="submit" id="submit" tabindex="5" class="btn btn-md btn-primary btn-outlined float-right">Submit</button>
 					</div>
 				</div>
+				<label></label>
 				<input type="hidden" name="nonce" value="{{ nonce }}">
 			</form>
 		</div>
