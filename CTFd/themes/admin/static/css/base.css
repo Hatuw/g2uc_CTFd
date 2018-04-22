@@ -42,8 +42,8 @@ pre {
 }
 
 .jumbotron {
-    /*background-color: #343a40;*/
-    /*color: #FFF;*/
+    background-color: #343a40;
+    color: #FFF;
     border-radius: 0;
     text-align: center;
 }
@@ -53,8 +53,8 @@ pre {
     display: block;
     /*padding: 0.8em;*/
     border-radius: 0;
-    /*background: #f0f0f0;*/
-    /*color: #aaa;*/
+    background: #f0f0f0;
+    color: #aaa;
     font-weight: 400;
     font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
     -webkit-appearance: none;

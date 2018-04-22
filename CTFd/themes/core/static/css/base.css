@@ -38,8 +38,7 @@ table > thead > tr > td {
 }
 
 .jumbotron {
-    /*background-color: #343a40;*/
-    background-color: #21a519;
+    background-color: #f25d8e;
     color: #FFF;
     border-radius: 0;
     text-align: center;
@@ -51,21 +50,23 @@ table > thead > tr > td {
     padding: 0.8em;
     border-radius: 0;
     background: #f0f0f0;
-    color: #aaa;
+    color: #f25d8e;
     font-weight: 400;
     font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
     -webkit-appearance: none;
+    border-radius: 5px;
 }
 
 .form-control:focus {
-    background-color: transparent;
-    border-color: #a3d39c;
-    box-shadow: 0 0 0 0.2rem #a3d39c;
+    background-color: #fff;
+    /*background-color: transparent;*/
+    border-color: #f25d8e;
+    box-shadow: 0 0 0 0.2rem #f25d8e;
     transition: background-color 0.3s, border-color 0.3s;
 }
 
 .input-filled-valid {
-    background-color: transparent;
+    background-color: #fff;
     border-color: #a3d39c;
     box-shadow: 0 0 0 0.2rem #a3d39c;
     transition: background-color 0.3s, border-color 0.3s;
@@ -99,6 +100,7 @@ table > thead > tr > td {
     line-height: 20px;
     font-weight: 700;
     padding: 8px 20px;
+    border-radius: 5px;
 }
 
 .btn-info {
