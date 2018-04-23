@@ -69,3 +69,5 @@ CTFd/uploads
 
 # CTFd Exports
 *.zip
+
+nohup.out
