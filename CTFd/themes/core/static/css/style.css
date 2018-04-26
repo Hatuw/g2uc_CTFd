@@ -111,6 +111,7 @@ table{
 }
 
 #score-graph{
+    /*display: none;*/
     height: 450px;
     display: block;
     clear: both;

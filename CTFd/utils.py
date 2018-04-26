@@ -204,7 +204,7 @@ def init_utils(app):
 @cache.memoize()
 def ctf_name():
     name = get_config('ctf_name')
-    return name if name else 'g2uc_CTFd'
+    return name if name else 'GCTF'
 
 
 @cache.memoize()

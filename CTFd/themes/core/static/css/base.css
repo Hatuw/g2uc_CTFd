@@ -9,8 +9,18 @@ h1, h2 {
 }
 
 a {
-    color: #337ab7;
+    /*color: #337ab7;*/
+    color: #dee2e6;
     text-decoration: none;
+}
+a:hover {
+    color: #f25d8e;
+    text-decoration: none;
+}
+
+.cartesianlayer  rect {
+    /*background: red;*/
+    border: 2px solid red;
 }
 
 table > thead > tr > td {
@@ -23,6 +33,26 @@ table > thead > tr > td {
     height: 450px;
     display: block;
     clear: both;
+}
+
+.xtick text{
+    fill: rgb(255, 255, 255) !important;
+}
+
+.ytick text{
+    fill: rgb(255, 255, 255) !important;
+}
+
+#score-graph .xlines-above {
+    stroke-width: 3px !important;
+    stroke: #000 !important;
+    stroke-opacity: 100 !important;
+}
+
+#score-graph .ylines-above {
+    stroke-width: 3px !important;
+    stroke: #000 !important;
+    stroke-opacity: 100 !important;
 }
 
 .fa-spin.spinner {
