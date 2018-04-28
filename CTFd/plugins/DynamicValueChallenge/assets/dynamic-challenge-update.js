@@ -67,7 +67,9 @@ function loadchal(id, update) {
         $('.chal-title').text(obj.name);
         $('.chal-name').val(obj.name);
         $('.chal-desc-editor').val(obj.description);
-        // $('.chal-value').val(obj.value);
+
+        $('.chal-value').val(obj.value);
+        
         $('.chal-initial').val(obj.initial);
         $('.chal-decay').val(obj.decay);
         $('.chal-minimum').val(obj.minimum);
