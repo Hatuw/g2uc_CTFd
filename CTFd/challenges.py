@@ -85,7 +85,8 @@ def challenges_view():
                     errors.append('{} has not started yet'.format(utils.ctf_name()))
                 if (utils.get_config('end') and utils.ctf_ended()) and not utils.view_after_ctf():
                     errors.append('{} has ended'.format(utils.ctf_name()))
-                return render_template('challenges.html', infos=infos, errors=errors, start=int(start), end=int(end))
+                # return render_template('challenges.html', infos=infos, errors=errors, start=int(start), end=int(end))
+                return render_template('challenges.html', infos=infos, errors=errors, start=int(end), end=int(start))
 
     if utils.get_config('verify_emails'):
         if utils.authed():
